@@ -50,32 +50,6 @@ export const ITEMS = [
 ];
 
 export const topCategoryStyles = {
-  "Nourriture et boissons": {
-    bg: "bg-blue-25",
-    circleBg: "bg-blue-100",
-    text: {
-      main: "text-blue-900",
-      count: "text-blue-700",
-    },
-    progress: {
-      bg: "bg-blue-100",
-      indicator: "bg-blue-700",
-    },
-    icon: "/icons/monitor.svg",
-  },
-  Travel: {
-    bg: "bg-success-25",
-    circleBg: "bg-success-100",
-    text: {
-      main: "text-success-900",
-      count: "text-success-700",
-    },
-    progress: {
-      bg: "bg-success-100",
-      indicator: "bg-success-700",
-    },
-    icon: "/icons/coins.svg",
-  },
   default: {
     bg: "bg-pink-25",
     circleBg: "bg-pink-100",
@@ -98,18 +72,6 @@ export const transactionCategoryStyles = {
     textColor: "text-pink-700",
     chipBackgroundColor: "bg-inherit",
   },
-  Payment: {
-    borderColor: "border-success-600",
-    backgroundColor: "bg-green-600",
-    textColor: "text-success-700",
-    chipBackgroundColor: "bg-inherit",
-  },
-  "Frais bancaires": {
-    borderColor: "border-success-600",
-    backgroundColor: "bg-green-600",
-    textColor: "text-success-700",
-    chipBackgroundColor: "bg-inherit",
-  },
   Transfer: {
     borderColor: "border-red-700",
     backgroundColor: "bg-red-700",
@@ -126,12 +88,6 @@ export const transactionCategoryStyles = {
     borderColor: "border-[#12B76A]",
     backgroundColor: "bg-[#12B76A]",
     textColor: "text-[#027A48]",
-    chipBackgroundColor: "bg-[#ECFDF3]",
-  },
-  Travel: {
-    borderColor: "border-[#0047AB]",
-    backgroundColor: "bg-blue-500",
-    textColor: "text-blue-700",
     chipBackgroundColor: "bg-[#ECFDF3]",
   },
   default: {

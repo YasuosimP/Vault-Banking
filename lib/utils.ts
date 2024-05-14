@@ -16,7 +16,7 @@ export const formatDateTime = (dateString: Date) => {
     day: "numeric", // numeric day of the month (e.g., '25')
     hour: "numeric", // numeric hour (e.g., '8')
     minute: "numeric", // numeric minute (e.g., '30')
-    hour12: true, // use 12-hour clock (true) or 24-hour clock (false)
+    hour12: false, // use 12-hour clock (true) or 24-hour clock (false)
   };
 
   const dateDayOptions: Intl.DateTimeFormatOptions = {
@@ -39,22 +39,22 @@ export const formatDateTime = (dateString: Date) => {
   };
 
   const formattedDateTime: string = new Date(dateString).toLocaleString(
-    "en-US",
+    "fr-FR",
     dateTimeOptions
   );
 
   const formattedDateDay: string = new Date(dateString).toLocaleString(
-    "en-US",
+    "fr-FR",
     dateDayOptions
   );
 
   const formattedDate: string = new Date(dateString).toLocaleString(
-    "en-US",
+    "fr-FR",
     dateOptions
   );
 
   const formattedTime: string = new Date(dateString).toLocaleString(
-    "en-US",
+    "fr-FR",
     timeOptions
   );
 
@@ -201,7 +201,7 @@ export const authFormSchema = (type: string) => z.object({
   lastName: type === 'sign-in' ? z.string().optional() : z.string().min(3),
   address1: type === 'sign-in' ? z.string().optional() : z.string().max(50),
   city: type === 'sign-in' ? z.string().optional() : z.string().max(50),
-  state: type === 'sign-in' ? z.string().optional() : z.string().min(2).max(2),
+  state: type === 'sign-in' ? z.string().optional() : z.string().max(18),
   postalCode: type === 'sign-in' ? z.string().optional() : z.string().min(3).max(6),
   dateOfBirth: type === 'sign-in' ? z.string().optional() : z.string().min(3),
   ssn: type === 'sign-in' ? z.string().optional() : z.string().min(3),

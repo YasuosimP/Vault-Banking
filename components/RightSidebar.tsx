@@ -39,7 +39,7 @@ const RightSidebar = ({ user, transactions, banks }: RightSidebarProps) => {
               alt="plus"
             />
             <h2 className="text-14 font-semibold text-gray-600">
-              Ajouter un banque
+              Ajouter une banque
             </h2>
           </Link>
         </div>
