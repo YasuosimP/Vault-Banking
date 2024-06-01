@@ -201,11 +201,11 @@
   }
 
   .transactions-account {
-    @apply flex flex-col justify-between gap-4 rounded-lg border-y bg-blue-600 px-4 py-5 md:flex-row;
+    @apply flex flex-col justify-between gap-4 rounded-lg border-y bg-red-600 px-4 py-5 md:flex-row;
   }
 
   .transactions-account-balance {
-    @apply flex-center flex-col  gap-2 rounded-md bg-blue-25/20 px-4 py-2 text-white;
+    @apply flex-center flex-col  gap-2 rounded-md bg-red-25/20 px-4 py-2 text-white;
   }
 
   .header-box {
@@ -235,7 +235,7 @@
 
   /* Bank Info */
   .bank-info {
-    @apply gap-[18px] flex p-4 transition-all border bg-blue-25 border-transparent;
+    @apply gap-[18px] flex p-4 transition-all border bg-red-25 border-transparent;
   }
 
   /* Category Badge */
@@ -375,4 +375,83 @@
   .sidebar-label {
     @apply text-16 font-semibold text-black-2 max-xl:hidden;
   }
+}
+
+.form-container {
+  width: 75%; 
+  margin: 0 ;
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    width: 100%; 
+  }
+}
+.messages-container {
+  display: flex;
+  height: 100vh;
+}
+
+.messages-list {
+  width: 30%;
+  border-right: 1px solid #ccc;
+  overflow-y: scroll;
+}
+
+.message-item {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.message-item:hover,
+.message-item.selected {
+  background-color: #f0f0f0;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.message-name {
+  font-weight: bold;
+  font-size:14px;
+}
+
+.message-time {
+  color: gray;
+}
+
+.message-status {
+  margin-top: 5px;
+  size: 1px;
+  display: inline-block; 
+  background-color: #ccffcc;
+  color: #008000; /* Dark green text */
+  font-size: 12px; /* Larger font size */
+  padding: 5px 10px; /* Padding around the text */
+  border-radius: 16px; /* Rounded corners */
+}
+
+
+.message-preview {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #333;
+}
+
+.message-detail {
+  width: 70%;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+.message-detail h2 {
+  margin-top: 0;
+}
+
+.message-detail p {
+  margin: 5px 0;
 }

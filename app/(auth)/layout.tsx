@@ -7,18 +7,17 @@ export default function RootLayout({
 }>) {
   return (
     <main className="dark flex min-h-screen w-full justify-between font-inter">
-      {children}
-      <div className="auth-asset">
+      <div className="auth-asset h-screen" style={{ height: '100vh', overflow: 'hidden' }}>
         <div>
           <Image 
             src="/icons/auth-image.svg"
             alt="Auth image"
             width={1500}
             height={1500}
-            className="rounded-l-l object-contain"
           />
         </div>
       </div>
+      {children}
     </main>
   );
 }

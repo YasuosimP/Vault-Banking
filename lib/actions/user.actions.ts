@@ -92,7 +92,7 @@ export const signUp = async ({ password, ...userData }: SignUpParams) => {
 
     const session = await account.createEmailPasswordSession(email, password);
 
-    cookies().set("appwrite-session", session.secret, {
+    cookies().set("x-session", session.secret, {
       path: "/",
       httpOnly: true,
       sameSite: "strict",
@@ -139,8 +139,8 @@ export const createLinkToken = async (user: User) => {
       },
       client_name: `${user.firstName} ${user.lastName}`,
       products: ['auth'] as Products[],
-      language: 'fr',
-      country_codes: ['FR'] as CountryCode[],
+      language: 'en',
+      country_codes: ['US'] as CountryCode[],
     }
 
     const response = await plaidClient.linkTokenCreate(tokenParams);

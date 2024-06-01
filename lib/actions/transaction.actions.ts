@@ -19,7 +19,6 @@ export const createTransaction = async (transaction: CreateTransactionProps) => 
       ID.unique(),
       {
         channel: 'online',
-        category: 'Transfer',
         ...transaction
       }
     )

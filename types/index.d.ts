@@ -99,13 +99,6 @@ declare type AccountTypes =
   | "investment"
   | "other";
 
-declare type Category = "Nourriture et boissons" | "Voyage" | "Transfert";
-
-declare type CategoryCount = {
-  name: string;
-  count: number;
-  totalCount: number;
-};
 
 declare type Receiver = {
   firstName: string;
@@ -255,6 +248,10 @@ declare interface DoughnutChartProps {
 declare interface PaymentTransferFormProps {
   accounts: Account[];
 }
+declare interface CheckbookRequestProps {
+  accounts: Account[];
+}
+
 
 // Actions
 declare interface getAccountsProps {
@@ -289,10 +286,18 @@ declare interface CreateTransactionProps {
   receiverBankId: string;
   email: string;
 }
+declare interface CreateCheckbookRequestProps {
+  bankId: string
+  checkbookCount: string
+  deliveryAddress: string
+  notes: string
+  createdAt: string
+}
 
 declare interface getTransactionsByBankIdProps {
   bankId: string;
 }
+
 
 declare interface signInProps {
   email: string;
@@ -307,7 +312,10 @@ declare interface exchangePublicTokenProps {
   publicToken: string;
   user: User;
 }
-
+declare interface requestCheckBookProps {
+  userId: string;
+bankId: string;
+}
 declare interface createBankAccountProps {
   accessToken: string;
   userId: string;

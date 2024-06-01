@@ -5,6 +5,11 @@ export const sidebarLinks = [
     label: "Profile",
   },
   {
+    imgURL: "/icons/messages.svg",
+    route: "/messages",
+    label: "Messages",
+  },
+  {
     imgURL: "/icons/dollar-circle.svg",
     route: "/my-banks",
     label: "Mes banques",
@@ -12,12 +17,17 @@ export const sidebarLinks = [
   {
     imgURL: "/icons/transaction.svg",
     route: "/transaction-history",
-    label: "Historique des transactions",
+    label: "Transactions",
   },
   {
     imgURL: "/icons/money-send.svg",
     route: "/payment-transfer",
     label: "Transfert de paiement",
+  },
+  {
+    imgURL: "/icons/checkbook.svg",
+    route: "/request",
+    label: "Demander un chéquier",
   },
 ];
 
@@ -92,8 +102,8 @@ export const transactionCategoryStyles = {
   },
   default: {
     borderColor: "",
-    backgroundColor: "bg-blue-500",
-    textColor: "text-blue-700",
+    backgroundColor: "bg-red-500",
+    textColor: "text-red-700",
     chipBackgroundColor: "bg-inherit",
   },
 };

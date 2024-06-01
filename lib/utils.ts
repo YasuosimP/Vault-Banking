@@ -106,10 +106,10 @@ export function getAccountTypeColors(type: AccountTypes) {
   switch (type) {
     case "depository":
       return {
-        bg: "bg-blue-25",
-        lightBg: "bg-blue-100",
-        title: "text-blue-900",
-        subText: "text-blue-700",
+        bg: "bg-red-25",
+        lightBg: "bg-red-100",
+        title: "text-red-900",
+        subText: "text-red-700",
       };
 
     case "credit":
@@ -136,7 +136,7 @@ export function countTransactionCategories(
   const categoryCounts: { [category: string]: number } = {};
   let totalCount = 0;
 
-  // Iterate over each transaction
+  // Iterate over each  transaction
   transactions &&
     transactions.forEach((transaction) => {
       // Extract the category from the transaction
